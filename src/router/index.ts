@@ -6,6 +6,43 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'index',
+      redirect: '/material'
+    },
+    {
+      path: '/material',
+      name: 'materialManage',
+      component: () => import('@/views/material/index.vue'),
+      meta: {
+        title: '原料管理'
+      }
+    },
+    {
+      path: '/order',
+      name: 'orderManage',
+      component: () => import('@/views/order/index.vue'),
+      meta: {
+        title: '订单管理'
+      }
+    },
+    {
+      path: '/user',
+      name: 'userManage',
+      component: () => import('@/views/user/index.vue'),
+      meta: {
+        title: '用户管理'
+      }
+    },
+    {
+      path: '/demo',
+      name: 'demoPage',
+      component: () => import('@/views/demo/index.vue'),
+      meta: {
+        title: '测试页面'
+      }
+    },
+    {
+      path: '/home',
       name: 'home',
       component: HomeView
     },
